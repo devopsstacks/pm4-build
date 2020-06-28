@@ -43,7 +43,7 @@ start () {
         echo -n $"Starting $prog: "
         dir=$(dirname ${pidfile})
         [ -d $dir ] || mkdir $dir
-        daemon --pidfile ${pidfile} /usr/sbin/php-fpm-7.2 --daemonize $OPTIONS
+        daemon --pidfile ${pidfile} /usr/sbin/php-fpm-7.2 --allow-to-run-as-root --daemonize $OPTIONS
         RETVAL=$?
         echo
         [ $RETVAL -eq 0 ] && touch ${lockfile}
