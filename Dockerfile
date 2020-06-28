@@ -8,8 +8,8 @@ LABEL processmaker-stack="pm4"
 
 # Install processmaker 
 COPY ["script-config/installpm.sh", "/tmp/"]
-COPY ["script-config/gai.conf", "/etc/"]
-COPY ["script-config/php-fpm-7.2", "/etc/rc.d/init.d/"]
+COPY ["file-config/gai.conf", "/etc/"]
+COPY ["file-config/php-fpm-7.2", "/etc/rc.d/init.d/"]
 RUN  chmod 700 /tmp/installpm.sh && \
      chmod 755 /etc/rc.d/init.d/php-fpm-7.2 \
      chmod 644 /etc/gai.conf \ 
