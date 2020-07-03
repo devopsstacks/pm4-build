@@ -57,8 +57,8 @@
 
 
 ## NodeJS ##
-  wget https://rpm.nodesource.com/setup_12.x ;
-  sh setup_12.x ;
+  wget https://rpm.nodesource.com/setup_14.x ;
+  sh setup_14.x ;
   yum -y install nodejs ; 
   npm install -g cross-env@3.2.4 ;
   npm install -g laravel-mix@2.1.* ;
