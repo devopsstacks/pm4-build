@@ -12,7 +12,7 @@
 
   yum -y remove httpd* ;
   yum -y install nginx ;
-  yum -y install php72-fpm php72-gd php72-mysqlnd php72-soap php72-mbstring php72-ldap php72-mcrypt php72-xml php72-opcache php72-cli php72-bcmath;
+  yum -y install php72-fpm php72-gd php72-mysqlnd php72-soap php72-mbstring php72-ldap php72-mcrypt php72-xml php72-opcache php72-cli php72-bcmath php72-pecl-imagick;
   yum -y install php72-curl php72-zip php72-json;
   yum -y install mysql57 ;
  
