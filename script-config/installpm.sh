@@ -12,8 +12,8 @@
 
   yum -y remove httpd* ;
   yum -y install nginx ;
-  yum -y install php73-fpm php73-gd php73-mysqlnd php73-soap php73-mbstring php73-ldap php73-mcrypt php73-xml php73-opcache php73-cli php73-bcmath php73-pecl-imagick;
-  yum -y install php73-curl php73-zip php73-json;
+  yum -y install php74-fpm php74-gd php74-mysqlnd php74-soap php74-mbstring php74-ldap php74-mcrypt php74-xml php74-opcache php74-cli php74-bcmath php74-pecl-imagick;
+  yum -y install php74-curl php74-zip php74-json;
   yum -y install mysql57 ;
  
 ## configure php.ini ##
@@ -81,8 +81,8 @@
   yum remove -y unixODBC* ;
   yum install -y http://mirror.centos.org/centos/7/os/x86_64/Packages/unixODBC-2.3.1-14.el7.x86_64.rpm ;
   yum install -y http://mirror.centos.org/centos/7/os/x86_64/Packages/unixODBC-devel-2.3.1-14.el7.x86_64.rpm ;
-  yum install -y gcc-c++ gcc php73-devel ;
-  yum install -y php73-odbc ;
+  yum install -y gcc-c++ gcc php74-devel ;
+  yum install -y php74-odbc ;
   yum install -y php7-pear ;
   ACCEPT_EULA=Y yum install -y msodbcsql ;
   pecl7 install sqlsrv ;
@@ -90,7 +90,7 @@
   echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini ;
   echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini ;
 #"ODBC connection " ;
-  yum install -y unixODBC unixODBC-devel php73-odbc ;
+  yum install -y unixODBC unixODBC-devel php74-odbc ;
   
 ## Create processmaker directory ##
  mkdir -p /opt/processmaker ;
